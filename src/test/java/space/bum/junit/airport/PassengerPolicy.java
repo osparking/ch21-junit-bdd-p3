@@ -9,10 +9,6 @@ import java.util.ArrayList;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import space.bum.junit.model.BusinessFlight;
-import space.bum.junit.model.Flight;
-import space.bum.junit.model.Passenger;
-import space.bum.junit.model.PremiumFlight;
 
 public class PassengerPolicy {
   private Flight economyFlight;
@@ -101,8 +97,8 @@ public class PassengerPolicy {
         () -> assertEquals(0, businessFlight.getPassengers().size()));
   }
 
-  @Then("^VIP의 비즈니스편 탑승 및 취소 모두 가능하다$")
-  public void vip의_비즈니스편_탑승_및_취소_모두_가능하다() throws Throwable {
+  @Then("^VIP의 비즈니스편 탑승은 가능하나 취소는 불가능하다$")
+  public void vip의_비즈니스편_탑승은_가능하나_취소는_불가능하다() throws Throwable {
     assertAll("Verify all conditions for a VIP passenger and a business flight",
         () -> assertEquals(true, businessFlight.addPassenger(park)),
         () -> assertEquals(1, businessFlight.getPassengers().size()),
