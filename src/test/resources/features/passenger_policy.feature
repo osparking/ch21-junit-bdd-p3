@@ -44,7 +44,7 @@ Feature: 승객 탑승 정책
   Scenario: 비즈니스 항공편, VIP 승객
     Given 비즈니스 항공편이 한대 있다
     When VIP 승객이 한명 도착했다
-    Then VIP의 비즈니스편 탑승 및 취소 모두 가능하다
+    Then VIP의 비즈니스편 탑승은 가능하나 취소는 불가능하다
     And VIP를 비즈니스편에 다중 탑승시킬 수 없다
            
   @tag5    
