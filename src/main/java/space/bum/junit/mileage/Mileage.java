@@ -3,8 +3,10 @@ package space.bum.junit.mileage;
 import java.util.HashMap;
 import java.util.Map;
 
+import lombok.Getter;
 import space.bum.junit.airport.Passenger;
 
+@Getter
 public class Mileage {
 
   public static final int VIP_FACTOR = 10;
